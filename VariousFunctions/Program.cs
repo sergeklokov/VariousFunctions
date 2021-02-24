@@ -27,6 +27,9 @@ namespace VariousFunctions
             Console.WriteLine("Vowels in 'I am trying to count the vowels' = " + CountVowels("I am trying to count the vowels"));
             Console.WriteLine("Vowels in 'I am trying to count the vowels' by LINQ = " + CountVowelsLINQ("I am trying to count the vowels"));
 
+            Console.WriteLine();
+            LambdaParametersDemo();
+            Console.WriteLine();
 
             Console.WriteLine("========================================");
             Console.WriteLine("Press any key..");
@@ -134,6 +137,30 @@ namespace VariousFunctions
             Console.WriteLine();
 
             return total;
+        }
+
+        /// <summary>
+        /// Let's play with pure lambda expressions and parameters
+        /// https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/lambda-expressions
+        /// </summary>
+        private static void LambdaParametersDemo()
+        {
+            Func<int, int> square = x => x * x;
+            Console.WriteLine("Lambda with one parameter: " + square(5));
+
+            Func<int, int, int> multiply = (x,y) => x * y;
+            Console.WriteLine("Lambda with two parameters: " + multiply(4,5));
+
+            //discards
+            //
+            // Error CS8400  Feature 'lambda discard parameters' is not available in C# 8.0. Please use language version 9.0 or greater.	
+            //
+
+            //Func<int, int, int> constantTest = (_, _) => 42;
+            //Console.WriteLine("discards parameters  : " + constantTest);
+            //Console.WriteLine("discards parameters 2: " + constantTest(1,2));
+
+            Console.WriteLine();
         }
     }
 }
