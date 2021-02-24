@@ -12,3 +12,6 @@ Serge Klokov
 List of websites used:
 https://ankitsharmablogs.com/csharp-coding-questions-for-technical-interviews/
 
+
+I tried to use c# v9.0
+.NET 5.0 is the next major release of .NET Core following 3.1. 

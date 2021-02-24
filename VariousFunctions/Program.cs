@@ -156,9 +156,9 @@ namespace VariousFunctions
             // Error CS8400  Feature 'lambda discard parameters' is not available in C# 8.0. Please use language version 9.0 or greater.	
             //
 
-            //Func<int, int, int> constantTest = (_, _) => 42;
-            //Console.WriteLine("discards parameters  : " + constantTest);
-            //Console.WriteLine("discards parameters 2: " + constantTest(1,2));
+            Func<int, int, int> constantTest = (_, _) => 42;
+            Console.WriteLine("discards parameters  : " + constantTest);
+            Console.WriteLine("discards parameters 2: " + constantTest(1, 2));
 
             Console.WriteLine();
         }
